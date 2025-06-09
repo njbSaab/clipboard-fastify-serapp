@@ -1,0 +1,27 @@
+{
+  "name": "clip-board",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+"scripts": {
+    "start": "ts-node src/index.ts",
+    "start:dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/env": "^5.0.2",
+    "@prisma/client": "^6.9.0",
+    "@types/node": "^22.15.30",
+    "fastify": "^5.3.3",
+    "fastify-plugin": "^5.0.1",
+    "prisma": "^6.9.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0"
+  }
+}

@@ -1,0 +1,31 @@
+### Получение главной страницы
+GET http://localhost:3000
+Accept: application/json
+
+GET http://localhost:3000/clipboard
+Accept: application/json
+
+POST http://localhost:3000/clipboard 
+Content-Type: application/json 
+{"content":"Test content"}
+
+PATCH http://localhost:3000/clipboard/e956b330-bdf8-47ef-8bef-decd722af8e9/favorite 
+Content-Type: application/json 
+{"favorite":false}
+
+GET http://localhost:3000/clipboard/frequent
+Accept: application/json
+
+POST http://localhost:3000/notes 
+Content-Type: application/json
+{"title":"Test Note","content":"Note content"}
+
+GET http://localhost:3000/clipboard
+
+DELETE http://localhost:3000/clipboard/3c35cbd2-a603-4988-a590-3d217755eeca
+
+GET http://localhost:3000/notes
+
+GET http://localhost:3000/notes/cca02ef1-b374-407e-8da8-21825e8fd726
+
+DELETE http://localhost:3000/notes/cca02ef1-b374-407e-8da8-21825e8fd726

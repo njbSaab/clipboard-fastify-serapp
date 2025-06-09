@@ -1,0 +1,22 @@
+fastify-simple-app/
+├── dist/
+├── node_modules/
+├── prisma/
+│   └── schema.prisma
+├── src/
+│   ├── index.ts
+│   ├── plugins/
+│   │   └── prisma.ts
+│   ├── routes/
+│   │   ├── clipboard.ts
+│   │   └── notes.ts
+│   ├── schemas/
+│   │   ├── clipboard.ts
+│   │   └── notes.ts
+├── .env
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+
+npx tsc
+
