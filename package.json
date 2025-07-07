@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-"scripts": {
+  "scripts": {
     "start": "ts-node src/index.ts",
     "start:dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "build": "tsc"
@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fastify/cors": "^11.0.1",
     "@fastify/env": "^5.0.2",
     "@prisma/client": "^6.9.0",
     "@types/node": "^22.15.30",

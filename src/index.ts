@@ -1,5 +1,6 @@
 import Fastify, { FastifyInstance } from 'fastify';
 import fastifyEnv from '@fastify/env';
+import fastifyCors from '@fastify/cors'; // Импортируем плагин CORS
 import { join } from 'path';
 import clipboardRoutes from './routes/clipboard';
 import notesRoutes from './routes/notes';
@@ -23,6 +24,14 @@ server.register(fastifyEnv, {
   confKey: 'config',
   schema,
   dotenv: { path: join(__dirname, '../.env') },
+});
+
+// Регистрация CORS
+server.register(fastifyCors, {
+  origin: ['http://localhost:4200'], // Разрешаем запросы только с http://localhost:4200
+  methods: ['GET', 'POST', 'PATCH', 'DELETE'], // Разрешенные методы
+  allowedHeaders: ['Content-Type'], // Разрешенные заголовки
+  credentials: true, // Если нужны куки или авторизация
 });
 
 // Базовый маршрут
